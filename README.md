@@ -1,7 +1,7 @@
 # SIIM-ACR Pneumothorax Segmentation (Kaggle)
 **Identify Pneumothorax disease in chest x-rays**
 
-## My Silver Medal Solution (Ranked: 47/1475)
+## My Silver Medal Solution (Ranked: 47 /1475)
 This competition is being hosted by the Society for Imaging Informatics in Medicine (SIIM) in coordination with the Annual Conference on Machine Intelligence in Medical Imaging (C-MIMI)
 The top winning teams in the competition will be awarded with monetary prizes up to **$30,000**,
 and each winning team will be invited and strongly encouraged to attend the conference with waived registration fees,
@@ -43,6 +43,6 @@ As a quick supplementary reference, a U-Net plus plus is a new general purpose i
 
 <img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/UNet.jpg" width= "720" height="580"/>
 
-Similarly, we performed ensembling with stacking of our four models. The details to the training can be accessed [here](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/Segmentation/Segmentation.ipynb)
+Similarly, we performed ensembling with stacking of our four models to obtain our final segmentation model. The details to the training can be accessed [here](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/Segmentation/Segmentation.ipynb)
 
 
