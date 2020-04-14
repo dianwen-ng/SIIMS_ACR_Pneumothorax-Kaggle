@@ -1,1 +1,0 @@
-download stage 2 images from the challenge and put them in train_stage2.
