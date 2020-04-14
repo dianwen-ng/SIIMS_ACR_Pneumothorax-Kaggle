@@ -24,7 +24,7 @@ we built a Faster R-CNN model with 1000 hand labelled targets provided by Dr Kon
 The original bounding box labels and the one from our model can be accessed in the [boundingbox_csv](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/tree/master/boundingbox_csv) folder.
 Additionally, the results from our model is shown below.
 
-<img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/image1.png" width= "899" height="640"/>
+<img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/image1.png" width= "899" height="580"/>
 
 Then, we ensembled our model by stacking the three models with a fully connected layers from the bottleneck output of the three models,
 where we froze up the front part and train only on the fully connected layers. At last, we use it to predict our classification results. The details to the training can be accessed [here](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/classification/Classification.ipynb)
