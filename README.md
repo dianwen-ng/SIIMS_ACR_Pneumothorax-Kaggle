@@ -41,7 +41,7 @@ In this section, we used almost the same data augmentation strategy with the bou
 
 As a quick supplementary reference, a U-Net plus plus is a new general purpose image segmentation architecture for more accurate image segmentation. UNet++ consists of U-Nets of varying depths whose decoders are densely connected at the same resolution via the redesigned skip pathways, which aim to address two key challenges of the U-Net: 1) unknown depth of the optimal architecture and 2) the unnecessarily restrictive design of skip connections.
 
-<img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/UNet.jpg" width= "720" height="580"/>
+<img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/UNet.jpg" width= "640" height="480"/>
 
 Similarly, we performed ensembling with stacking of our four models to obtain our final segmentation model. The details to the training can be accessed [here](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/Segmentation/Segmentation.ipynb)
 
