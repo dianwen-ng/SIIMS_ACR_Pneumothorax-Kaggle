@@ -24,10 +24,25 @@ we built a Faster R-CNN model with 1000 hand labelled targets provided by Dr Kon
 The original bounding box labels and the one from our model can be accessed in the [boundingbox_csv](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/tree/master/boundingbox_csv) folder.
 Additionally, the results from our model is shown below.
 
-<img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/image1.png" width= "768" height="640"/>
+<img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/image1.png" width= "899" height="640"/>
 
 Then, we ensembled our model by stacking the three models with a fully connected layers from the bottleneck output of the three models,
-where we froze up the front part and train only on the fully connected layers. At last, we use it to predict our classification results.
+where we froze up the front part and train only on the fully connected layers. At last, we use it to predict our classification results. The details to the training can be accessed [here](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/classification/Classification.ipynb)
 
 
 ## Segmentation Model (Part 2)
+In this section, we used almost the same data augmentation strategy with the bounding box crop and a few other steps like image contrasting other grid distortion. Then, we build 4 semantic segmentation models with its architecture resembling the structure of modified U-Net with its backbone mainly focuses on EfficientNet B4 and Xception model. 
+
+**Our models are namely**:
+* U-Net plus plus backed on EfficientNet (with bounding boxes)
+* U-net plus plus backed on EfficientNet (without bounding boxes)
+* U-Net backed on Efficient (with bounding boxes)
+* U-Net plus plus backed on Xception (with bounding boxes)
+
+As a quick supplementary reference, a U-Net plus plus is a new general purpose image segmentation architecture for more accurate image segmentation. UNet++ consists of U-Nets of varying depths whose decoders are densely connected at the same resolution via the redesigned skip pathways, which aim to address two key challenges of the U-Net: 1) unknown depth of the optimal architecture and 2) the unnecessarily restrictive design of skip connections.
+
+<img src="https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/screenshots/UNet.jpg" width= "720" height="580"/>
+
+Similarly, we performed ensembling with stacking of our four models. The details to the training can be accessed [here](https://github.com/DW-Hwang/SIIMS_ACR_Pneumothorax-Kaggle/blob/master/Segmentation/Segmentation.ipynb)
+
+
